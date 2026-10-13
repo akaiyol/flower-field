@@ -1,8 +1,12 @@
 {
-  "name": "flower-field",
-  "version": "1.0.0",
+  "name": "flower-field-remaster",
+  "version": "0.1.0",
   "private": true,
-  "description": "Animated lavender dotwork flowers and stem rulers.",
-  "scripts": { "test": "node scripts/verify.cjs" },
-  "devDependencies": { "playwright": "1.62.1" }
+  "scripts": {
+    "start": "python3 -m http.server 4173 --bind 127.0.0.1",
+    "test": "node .cursor/skills/verify-flower-field/verify.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
 }

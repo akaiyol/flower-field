@@ -1,16 +1,12 @@
 ---
 name: verify-flower-field
-description: Verify the standalone Flower Field at desktop and narrow widths, including artwork loading, leaf counts, ruler legibility, motion and reduced motion. Use after renderer or layout changes.
+description: Verify the procedural Flower Field, reversible growth input, geometry controls, responsive presentation and motion in a real browser.
 ---
 
-# Verify flower field
+# Verify Flower Field
 
-From the repository root, install test dependencies with `npm install` and install Chromium with `npx playwright install chromium`, then run `npm test`. Pass an evidence path with `npm test -- /absolute/evidence/path`; the default is `verification-output/` (ignored by Git). `PLAYWRIGHT_MODULE` can point to an existing Playwright installation.
+The maintained verification workflow is [verify-flower-field](../../../.cursor/skills/verify-flower-field/SKILL.md). Read that skill and its feature map before verifying this renderer.
 
-The website itself requires no npm packages or build step. Open `index.html` or serve this directory with a static HTTP server.
+Run `npm test -- /private/tmp/flower-field-verification/review` from the repository root after installing Playwright and Chromium as documented there. The procedural harness lives at `.cursor/skills/verify-flower-field/verify.cjs`. The old `scripts/verify.cjs` exercises the retired SVG/raster renderer and is retained only as historical reference.
 
-The helper creates an isolated Chromium browser and a loopback server restricted to public project files. It checks image loading, 11 desktop / 6 mobile plants, two leaves per plant, 8 numeric labels per stem on the right side, minor ticks, computed label sizes, page overflow, and stem alignment with the page bottom at 1280/390/320px. It records a full principal sway cycle plus continuation, checks static reduced motion, and proves the ruler guard rejects missing labels and the historical tiny-font collision in isolated page fixtures. It closes its own browser and server in `finally` and retains screenshots, motion frames and results.
-
-Inspect screenshots at actual scale and all distinct blooms and leaves enlarged. Use [critique-flower-field](../critique-flower-field/SKILL.md) for appearance and completeness: passing assertions do not establish aesthetic acceptance. Hidden-tab and offscreen pause handlers remain in the renderer, but this helper does not claim a real hidden-tab visibility test.
-
-For a README screenshot, capture the field itself rather than browser chrome or unrelated UI. `docs/flower-field.png` is generated from the desktop render. Keep evidence from failed runs; do not publish unless the user authorized it.
+Use `docs/approved-field.png` as the visual target and `docs/current-study.png` as the current implementation screenshot. Passing assertions do not establish visual acceptance. Follow the adjacent critique skill for rendered review and keep physical-device and actual hidden-tab checks explicitly unverified until exercised.

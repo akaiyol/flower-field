@@ -1,17 +1,8 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A lavender dotwork flower field with gently swaying blooms and numbered stem rulers.">
-  <title>Flower Field</title>
-  <link rel="stylesheet" href="field.css">
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Flower field — procedural study</title><link rel="stylesheet" href="field.css"><script defer src="field.js"></script></head>
 <body>
-  <main>
-    <h1 class="sr-only">Flower Field</h1>
-    <figure class="timeline-flowers" aria-hidden="true"></figure>
-  </main>
-  <script src="field.js"></script>
-</body>
-</html>
+<header><h1>Flower field</h1><details id="study"><summary>Study controls</summary><form id="parameters"><p>Shape the flowers. The seed keeps their variation reproducible. Stem and bowl numbers show normalized height.</p><div id="inputs"></div><div class="actions"><button type="button" id="reset">Reset</button><button type="button" id="export">Export parameters</button></div><output id="notice" aria-live="polite"></output></form></details></header>
+<main><div id="field" tabindex="0" role="group" aria-label="Interactive flower field. Drag or scroll right to grow, left to rewind. Arrow keys also change growth."><canvas id="art" role="img" aria-label="Procedural lavender dotwork flowers, numeric bowls and numbered stems on black"></canvas></div></main>
+<footer><label for="growth">Growth <output id="growth-value">100%</output></label><input id="growth" aria-label="Field growth" type="range" min="0" max="1" step="0.001" value="1"><p id="hint">Drag or scroll right to grow; left to rewind.</p></footer>
+</body></html>
