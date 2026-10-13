@@ -1,0 +1,8 @@
+{
+  "name": "flower-field",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Animated lavender dotwork flowers and stem rulers.",
+  "scripts": { "test": "node scripts/verify.cjs" },
+  "devDependencies": { "playwright": "1.62.1" }
+}
