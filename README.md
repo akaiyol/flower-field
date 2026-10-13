@@ -2,13 +2,15 @@
 
 A procedural remaster of the lavender dotwork field. Curved petal surfaces, numeric bowls, leaves and stems are generated in code; no flower bitmap is used by the renderer.
 
+![Procedural flower field growing, swaying and rewinding](docs/flower-field-growth.gif)
+
+[Download the video](docs/flower-field-growth.webm)
+
+## Visual reference
+
 ![Approved visual target](docs/approved-field.png)
 
 The screenshot above is the approved visual target, not a screenshot of this implementation. This is a first study awaiting visual review.
-
-## Current study
-
-![First procedural implementation](docs/current-study.png)
 
 ## Run
 
